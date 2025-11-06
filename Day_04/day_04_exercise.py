@@ -121,3 +121,52 @@ print("the original sentence is: ", sentence)
 print("the sliced phrase is: ", phrase)  # because because because
 print("the sentence after slicing is: ", sentence.replace("because"," "))  # You cannot end a sentence with is a conjunction
 
+#Does ''Coding For All' start with a substring Coding?
+print(company.startswith("coding"))
+
+#Does 'Coding For All' end with a substring coding?
+print(company.endswith("coding"))
+
+#'   Coding For All      '  , remove the left and right trailing spaces in the given string.
+sentence='   Coding For All      '
+print(sentence.strip())
+
+#Which one of the following variables return True when we use the method isidentifier():
+#30DaysOfPython
+#thirty_days_of_python
+sentence1='30DaysOfPython'
+sentence2='thirty_days_of_python'
+print(sentence1.isidentifier())
+print(sentence2.isidentifier())
+
+#The following list contains the names of some of python libraries: ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']. Join the list with a hash with space string.
+python_libraries=['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']
+result='#, '.join(python_libraries)
+print(result)
+
+#Use the new line escape sequence to separate the following sentences.
+print("I am enjoying this challenge.\nI just wonder what is next.")
+
+#Use a tab escape sequence to write the following lines
+print("Name\tAge\tCountry\tCity\nKeshar\t24\tJapan\tTokyo")
+
+#Use the string formatting method to display the following:
+radius=10
+pi=3.14
+pow=2
+string='radius'
+print("radius=%d"%radius)
+print('radius={}'.format(radius))
+print("area={}*{}**{}".format(pi,string, pow))
+print("The area of a circle with {} {} is {} meters square.".format(string,radius,pi*radius**pow))
+print("The area of a circle with %s %d is %.2f meters square."%(string,radius,pi*radius**pow))
+
+#Make the following using string formatting methods:
+a,b=8,6
+print('{} + {} = {}'.format(a, b, a + b))
+print('{} - {} = {}'.format(a, b, a - b))
+print('{} * {} = {}'.format(a, b, a * b))
+print('{} / {} = {:.2f}'.format(a, b, a / b)) # limits it to two digits after decimal
+print('{} % {} = {}'.format(a, b, a % b))
+print('{} // {} = {}'.format(a, b, a // b))
+print('{} ** {} = {}'.format(a, b, a ** b))
