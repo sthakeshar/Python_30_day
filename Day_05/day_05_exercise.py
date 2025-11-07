@@ -73,4 +73,38 @@ print(list2)
 print(list2[0:3])
 
 #Slice out the last 3 companies from the list
-print(list2[-1:-3])
+list3=list2[:-3]
+print(list3)
+
+#Slice out the middle IT company or companies from the list
+list3.pop(2)
+print(list3)
+del list3[2]
+print(list3)
+
+#Remove the last IT company from the list
+list3.pop()
+print(list3)
+
+#Remove all IT companies from the list
+list3.clear()
+print(list3)
+
+#Destroy the IT companies list
+del list2
+
+#Join the following lists:
+front_end = ['HTML', 'CSS', 'JS', 'React', 'Redux']
+back_end = ['Node','Express', 'MongoDB']
+full_stack=front_end+back_end
+print(full_stack)
+
+full_stack.append("Python")
+full_stack.append("SQL")
+full_stack.append("Redux")
+print(full_stack)
+
+
+
+
+
