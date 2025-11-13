@@ -27,3 +27,47 @@ def add_all_nums(*args):
     print(total)
 
 add_all_nums(1,2,3,4,7)
+
+#Temperature in °C can be converted to °F using this formula: °F = (°C x 9/5) + 32. Write a function which converts °C to °F, convert_celsius_to-fahrenheit.
+def convert_celsius_to_fahrenheit(celcius):
+    fahrenheit=(celcius*(9/5))+32
+    return fahrenheit
+
+print(convert_celsius_to_fahrenheit(32.5))
+
+#Write a function called check-season, it takes a month parameter and returns the season: Autumn, Winter, Spring or Summer
+month = input("Enter the month: ").strip().capitalize()
+
+def check_season(month):
+# Determine the season
+    if month in ("September", "October", "November"):
+        season = "Autumn"
+    elif month in ("December", "January", "February"):
+        season = "Winter"
+    elif month in ("March", "April", "May"):
+        season = "Spring"
+    elif month in ("June", "July", "August"):
+        season = "Summer"
+    else:
+        season = "Invalid month entered"
+    return season
+
+# Print the result
+print(f"The season is {check_season(month)}.")
+
+#Write a function called calculate_slope which return the slope of a linear equation
+def calculate_slope(x1, y1, x2, y2):
+    if x2 - x1 == 0:
+        return "Slope is undefined (vertical line)"
+    else:
+    # Calculate the slope: change in y / change in x
+        slope = (y2 - y1) / (x2 - x1)
+    return slope
+
+# Calculate the slope for points (1, 2) and (3, 4)
+slope_value = calculate_slope(1, 2, 3, 4)
+print(f"The slope for points (1, 2) and (3, 4) is: {slope_value}")
+
+# Example of an undefined slope for points (2, 3) and (2, 5)
+undefined_slope_value = calculate_slope(2, 3, 2, 5)
+print(f"The slope for points (2, 3) and (2, 5) is: {undefined_slope_value}")
