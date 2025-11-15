@@ -1,7 +1,11 @@
 # total_languages.py
 import sys
-sys.path.append('\\Python_30_day')
-# Step 1: Import the data from the correct file inside the data folder
+import os
+
+# Fix path so Python can import from DATA folder
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+sys.path.append(BASE_DIR)
+
 from DATA.countries_data import countries
 
 # Step 2: Create an empty set to store unique languages

@@ -1,5 +1,9 @@
 import sys
-sys.path.append('\\Python_30_day')
+import os
+
+# Fix path so Python can import from DATA folder
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+sys.path.append(BASE_DIR)
 
 from DATA.countries import countries
 
