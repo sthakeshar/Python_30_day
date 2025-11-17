@@ -46,3 +46,51 @@ def get_string_lists(lst):
 
 print(get_string_lists([1, 'hello', True, 'world', 3.5, 'python']))
 
+#Use reduce to sum all the numbers in the numbers list.
+sum=reduce(lambda x, y:x+y,numbers)
+print(sum)
+
+#Use reduce to concatenate all the countries and to produce this sentence: Estonia, Finland, Sweden, Denmark, Norway, and Iceland are north European countries
+north_european_countries=reduce(lambda x,y:f"{x}, {y}",countries[:-1])+ f" and {countries[-1]} are northen european countries"
+print(north_european_countries)
+
+import sys
+import os
+
+# Fix path so Python can import from DATA folder
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
+sys.path.append(BASE_DIR)
+
+from DATA.countries import countries
+def categorize_countries(pattern):
+    return [country for country in countries if pattern.lower() in country.lower()]
+
+print(categorize_countries("land"))
+print(categorize_countries("ia"))
+print(categorize_countries("stan"))
+print(categorize_countries("island"))
+
+#Create a function returning a dictionary, where keys stand for starting letters of countries and values are the number of country names starting with that letter.
+def dictonary_countries():
+    result={}
+    for item in countries:
+        first_letter = item[0].upper()     # get starting letter
+        if first_letter in result:
+            result[first_letter] += 1
+        else:
+            result[first_letter] = 1
+    return result
+
+print(dictonary_countries())
+
+#Declare a get_first_ten_countries function - it returns a list of first ten countries from the countries.js list in the data folder.
+def get_first_ten_countries():
+    return countries[:10]
+
+print(get_first_ten_countries())
+
+#Declare a get_last_ten_countries function that returns the last ten countries in the countries list.
+def get_last_ten_countries():
+    return countries[-10:]
+
+print(get_last_ten_countries())
